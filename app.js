@@ -86,6 +86,8 @@ const scriptSrcUrls = [
     "https://kit.fontawesome.com",
     "https://cdnjs.cloudflare.com",
     "https://cdn.jsdelivr.net",
+    "https://cdn.maptiler.com",
+    "https://api.maptiler.com",
 ];
 const styleSrcUrls = [
     "https://kit-free.fontawesome.com",
@@ -94,13 +96,18 @@ const styleSrcUrls = [
     "https://api.tiles.mapbox.com",
     "https://fonts.googleapis.com",
     "https://use.fontawesome.com",
+    "https://cdn.maptiler.com",
+    "https://api.maptiler.com",
 ];
 const connectSrcUrls = [
     "https://api.mapbox.com",
     "https://*.tiles.mapbox.com",
     "https://events.mapbox.com",
+    "https://cdn.maptiler.com",
+    "https://api.maptiler.com",
 ];
 const fontSrcUrls = [];
+
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
@@ -163,3 +170,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Serving on port ${port}`)
 })
+
+// console.log(process.env.MAPTILER_API_KEY)
